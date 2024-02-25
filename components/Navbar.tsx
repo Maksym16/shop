@@ -5,6 +5,9 @@ import MainNav from '@/components/MainNav';
 import getCategories from '@/actions/get-categories';
 import NavbarActions from '@/components/NavbarActions';
 
+
+export const revalidate = 0;
+
 export default async function Navbar() {
   const categories = await getCategories();
 
