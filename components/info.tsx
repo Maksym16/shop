@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { Product } from '@/types';
 import React from 'react';
@@ -8,9 +8,10 @@ import { ShoppingCart } from 'lucide-react';
 
 interface InfoProps {
   data: Product;
+  onClick?: (e: any) => void;
 }
 
-const Info: React.FC<InfoProps> = ({ data }) => {
+const Info: React.FC<InfoProps> = ({ data, onClick }) => {
   return (
     <div>
       <h1 className="text-3xl font-bold text-gray-900">{data.name}</h1>
@@ -32,9 +33,17 @@ const Info: React.FC<InfoProps> = ({ data }) => {
             style={{ backgroundColor: data?.color?.value }}
           />
         </div>
+        <div>
+          <h3 className="font-semibold text-black">Description:</h3>
+          <div className="">
+            {data?.description.split('- ').map((item) => {
+              return !!item.length && <p key={item}>{`- ${item}`}</p>;
+            })}
+          </div>
+        </div>
       </div>
       <div className="mt-10 flex items-center gap-x-3">
-        <Button className='flex items-center gap-x-2'>
+        <Button className="flex items-center gap-x-2" onClick={(e) => onClick && onClick(e)}>
           <ShoppingCart />
           Add To Cart
         </Button>
