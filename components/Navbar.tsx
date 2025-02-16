@@ -11,6 +11,10 @@ export const revalidate = 0;
 export default async function Navbar() {
   const categories = await getCategories();
 
+  if (!categories) {
+    return null;
+  }
+
   return (
     <div className='border-b'>
       <Container>
