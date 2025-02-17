@@ -1,4 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <br />
+    <a href="https://ecommercestore-fawn.vercel.app" target="_blank">
+Banner
+    </a>
+  <br />
+
+   <div>
+     <img
+      src="https://img.shields.io/badge/-TailwindCSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=38B2AC"
+      alt="TailwindCSS"
+    />
+    <img
+      src="https://img.shields.io/badge/-React_JS-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB"
+      alt="React.js"
+    />
+    <img
+      src="https://img.shields.io/badge/-Next.js-black?style=for-the-badge&logoColor=white&logo=next.js&color=000000"
+      alt="Next.js"
+    />
+  </div>
+
+  </div>
+
+  <h3 align="center">
+    <a href="https://ecommercestore-fawn.vercel.app" target="_blank">
+       Shop
+    </a>
+  </h3>
+
+   <div align="center">
+    E-Commerce shop powered by CMS.
+  </div>
+</div>
+
+## 📋 <a name="table">Table of Contents</a>
+
+1. ⚙️ [Tech Stack](#tech-stack)
+2. 🤸 [Quick Start](#quick-start)
+
+## <a name="tech-stack">⚙️ Tech Stack</a>
+
+- Tailwind
+- React.js
+- Next.js
 
 ## Getting Started
 
