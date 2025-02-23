@@ -10,12 +10,17 @@ import useCart from '@/hooks/use-cart';
 
 interface InfoProps {
   data: Product;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
-const Info: React.FC<InfoProps> = ({ data }) => {
+const Info: React.FC<InfoProps> = ({ data, onClick }) => {
   const cart = useCart();
 
   const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
+    if (onClick) {
+      onClick(event);
+      return;
+    }
     event.stopPropagation();
     cart.addItem(data);
   };

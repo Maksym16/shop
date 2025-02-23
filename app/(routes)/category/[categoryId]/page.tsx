@@ -34,7 +34,7 @@ const CategoryPage: React.FC<CategoryPageProps> = async ({
   const sizes = await getSizes();
   const roastTypes = await getRoastTypes();
   const category = await getCategory(params.categoryId);
-
+  
   return (
     <div className="bg-white">
       <Container>
