@@ -2,7 +2,7 @@
 
 import Button from '@/components/ui/Button';
 import IconButton from '@/components/ui/IconButton';
-import { Color, Size } from '@/types';
+import { RoastType, Size } from '@/types';
 import { Dialog } from '@headlessui/react';
 import { Plus, X } from 'lucide-react';
 import { useState } from 'react';
@@ -10,10 +10,10 @@ import Filter from './Filter';
 
 interface MobileFiltersProps {
   sizes: Size[];
-  colors: Color[];
+  roastTypes: RoastType[];
 }
 
-const MobileFilters: React.FC<MobileFiltersProps> = ({ sizes, colors }) => {
+const MobileFilters: React.FC<MobileFiltersProps> = ({ sizes, roastTypes }) => {
   const [open, setOpen] = useState(false);
 
   const onOpen = () => {
@@ -43,7 +43,7 @@ const MobileFilters: React.FC<MobileFiltersProps> = ({ sizes, colors }) => {
             <div className="p-4">
        
               <Filter valueKey="sizeId" name="Sizes" data={sizes} />
-              <Filter valueKey="colorId" name="Colors" data={colors} />
+              <Filter valueKey="roastTypeId" name="Roast Types" data={roastTypes} />
  
             </div>
           </Dialog.Panel>

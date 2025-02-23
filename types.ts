@@ -17,7 +17,9 @@ export interface Product {
   price: string;
   isFeatured: boolean;
   size: Size;
-  color: Color;
+  coffeeType: string;
+  roastType: RoastType;
+  region: Region;
   images: Image[];
   description: string;
 }
@@ -28,7 +30,13 @@ export interface Size {
   value: string;
 }
 
-export interface Color {
+export interface RoastType {
+  id: string;
+  name: string;
+  value: string;
+}
+
+export interface Region {
   id: string;
   name: string;
   value: string;

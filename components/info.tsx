@@ -1,17 +1,24 @@
 'use client';
 
 import { Product } from '@/types';
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import Currency from './ui/Currency';
 import Button from './ui/Button';
 import { ShoppingCart } from 'lucide-react';
+import useCart from '@/hooks/use-cart';
+
 
 interface InfoProps {
   data: Product;
-  onClick?: (e: any) => void;
 }
 
-const Info: React.FC<InfoProps> = ({ data, onClick }) => {
+const Info: React.FC<InfoProps> = ({ data }) => {
+  const cart = useCart();
+
+  const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
+    event.stopPropagation();
+    cart.addItem(data);
+  };
   return (
     <div>
       <h1 className="text-3xl font-bold text-gray-900">{data.name}</h1>
@@ -27,11 +34,15 @@ const Info: React.FC<InfoProps> = ({ data, onClick }) => {
           <div className="">{data?.size?.name}</div>
         </div>
         <div className="flex items-center gap-x-4">
-          <h3 className="font-semibold text-black">Color:</h3>
+          <h3 className="font-semibold text-black">Roast Type:</h3>
           <div
             className="h-6 w-6 rounded-full border border-gray-600"
-            style={{ backgroundColor: data?.color?.value }}
+            style={{ backgroundColor: data?.roastType?.value }}
           />
+        </div>
+        <div className="flex items-center gap-x-4">
+          <h3 className="font-semibold text-black">Region:</h3>
+          <div className="">{data?.region?.name}</div>
         </div>
         <div>
           <h3 className="font-semibold text-black">Description:</h3>
@@ -43,7 +54,7 @@ const Info: React.FC<InfoProps> = ({ data, onClick }) => {
         </div>
       </div>
       <div className="mt-10 flex items-center gap-x-3">
-        <Button className="flex items-center gap-x-2" onClick={(e) => onClick && onClick(e)}>
+        <Button className="flex items-center gap-x-2" onClick={(e) => onAddToCart(e)}>
           <ShoppingCart />
           Add To Cart
         </Button>

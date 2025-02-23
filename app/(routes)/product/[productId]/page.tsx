@@ -5,6 +5,7 @@ import Gallery from "@/components/gallery"
 import Info from "@/components/info"
 import Container from "@/components/ui/container"
 
+
 interface ProductPageProps {
   params: {
     productId: string
@@ -16,6 +17,10 @@ const ProductPage: React.FC<ProductPageProps> = async ({params}) => {
   const suggestedProduct = await getProducts({
     categoryId: product?.category.id
   })
+
+  if (!product) {
+    return null;
+  }
 
   return (
     <div className="bg-white">

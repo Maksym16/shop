@@ -6,7 +6,7 @@ import Image from 'next/image';
 import IconButton from '@/components/ui/IconButton';
 import { Expand, ShoppingCart } from 'lucide-react';
 import Currency from '@/components/ui/Currency';
-import { RedirectType, redirect, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import usePreviewModal from '@/hooks/use-preview-modal';
 import useCart from '@/hooks/use-cart';
 
