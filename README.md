@@ -1,7 +1,7 @@
 <div align="center">
   <br />
     <a href="https://ecommercestore-fawn.vercel.app" target="_blank">
-Banner
+      <img width="1676" alt="Screen Shot 2025-02-15 at 4 55 50 AM" src="https://github.com/user-attachments/assets/eab8e4d0-6dd2-418e-b256-f30551994455" />
     </a>
   <br />
 
@@ -24,7 +24,7 @@ Banner
 
   <h3 align="center">
     <a href="https://ecommercestore-fawn.vercel.app" target="_blank">
-       Shop
+       Coffee Shop
     </a>
   </h3>
 
