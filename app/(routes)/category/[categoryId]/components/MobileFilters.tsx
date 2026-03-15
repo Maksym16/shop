@@ -34,13 +34,14 @@ const MobileFilters: React.FC<MobileFiltersProps> = ({ sizes, roastTypes }) => {
         <div className="fixed inset-0 bg-black bg-opacity-25" />
         {/* dialog position */}
         <div className="fixed inset-0 z-40 flex">
-          <Dialog.Panel className="relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-6 shadow-xl">
+          <Dialog.Panel className="relative ml-auto flex h-full w-full max-w-sm
+           flex-col overflow-y-auto bg-white py-4 pb-6 shadow-xl">
             {/* close btn */}
             <div className="flex items-center justify-end px-4">
               <IconButton className='' icon={<X size={15}/>} onClick={onClose}/>
             </div>
             {/* render filters */}
-            <div className="p-4">
+            <div className="p-4 max-w-4">
        
               <Filter valueKey="sizeId" name="Sizes" data={sizes} />
               <Filter valueKey="roastTypeId" name="Roast Types" data={roastTypes} />
